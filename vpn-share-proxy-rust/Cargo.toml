@@ -1,0 +1,31 @@
+[package]
+name = "vpn-share-proxy"
+version = "0.1.0"
+edition = "2021"
+authors = ["VPN Share Proxy Team"]
+description = "VPN Share Proxy daemon — hotspot-to-VPN gateway orchestrator for Android"
+
+[dependencies]
+tokio = { version = "1.38", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+anyhow = "1.0"
+futures = "0.3"
+libc = "0.2"
+
+[[bin]]
+name = "vspd"
+path = "src/main.rs"
+
+[[bin]]
+name = "vsp-ctl"
+path = "src/bin/vsp_ctl.rs"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true

@@ -1,0 +1,62 @@
+# --- OS / editors ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.iml
+.cursor/
+
+# --- Secrets / local machine ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*keystore*
+local.properties
+secrets/
+credentials.json
+**/google-services.json
+
+# Device / runtime config (may contain LAN MACs, custom DNS, iface names)
+**/config.json
+**/config.local.json
+**/*.local.json
+
+# --- Rust (vpn-share-proxy-rust) ---
+vpn-share-proxy-rust/target/
+**/target/
+**/*.rlib
+**/*.rmeta
+
+# --- Android / Gradle (vpn-share-proxy-app) ---
+vpn-share-proxy-app/.gradle/
+vpn-share-proxy-app/**/build/
+vpn-share-proxy-app/dist/
+vpn-share-proxy-app/local.properties
+*.apk
+*.aab
+*.ap_
+*.dex
+captures/
+.externalNativeBuild/
+.cxx/
+
+# --- Magisk module build products ---
+vpn-share-proxy-module/bin/
+vpn-share-proxy-module/*.zip
+*.zip
+
+# --- Logs / temp ---
+*.log
+*.tmp
+*.bak
+/tmp/
+**/.cache/

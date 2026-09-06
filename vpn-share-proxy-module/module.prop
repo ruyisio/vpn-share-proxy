@@ -1,0 +1,6 @@
+id=vpn_share_proxy
+name=VPN Share Proxy
+version=v3.0.0
+versionCode=300
+author=VPN Share Proxy Team
+description=Hotspot-to-VPN share proxy native daemon (Netlink FIB + netfilter) for KernelSU/Magisk.

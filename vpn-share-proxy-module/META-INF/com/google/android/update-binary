@@ -1,0 +1,33 @@
+#!/sbin/sh
+#################
+# Initialization
+#################
+umask 022
+ui_print() { echo "$1"; }
+
+OUTFD=$2
+ZIPFILE=$3
+
+mount /data 2>/dev/null
+
+# KernelSU
+if [ -f /data/adb/ksu/bin/ksud ] || [ -f /data/adb/ksud ] || [ -n "$KSU" ]; then
+    true
+fi
+
+# Magisk
+if [ -f /data/adb/magisk/util_functions.sh ]; then
+    . /data/adb/magisk/util_functions.sh
+    install_module
+    exit 0
+fi
+
+# APatch
+if [ -f /data/adb/ap/util_functions.sh ]; then
+    . /data/adb/ap/util_functions.sh
+    install_module
+    exit 0
+fi
+
+ui_print "! Installed via root manager"
+exit 0

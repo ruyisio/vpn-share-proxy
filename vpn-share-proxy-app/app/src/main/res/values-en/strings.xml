@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VPN Share Proxy</string>
+    <string name="brand">VPN Share Proxy</string>
+    <string name="brand_subtitle">Pocket Bridge · VPN Share Proxy Console</string>
+    <string name="status_tun_label">VPN Interface (tun)</string>
+    <string name="status_table_label">Routing Table</string>
+    <string name="status_devices_label">Hotspot Clients</string>
+    <string name="status_stack_label">Active Stack</string>
+    <string name="status_checking">● Checking</string>
+    <string name="status_active">● Active</string>
+    <string name="status_waiting">● Waiting VPN</string>
+    <string name="status_standby">● Standby</string>
+    <string name="status_offline">● Offline</string>
+    <string name="status_daemon_ready">Daemon Status</string>
+    <string name="device_count_format">%d devices</string>
+    <string name="table_format">Table %s</string>
+    <string name="state_via_vpn">Current: Via VPN</string>
+    <string name="state_direct">Current: Direct</string>
+    <string name="iface_selected">Managed</string>
+    <string name="iface_unselected">Unmanaged</string>
+    <string name="tether_wifi">Wi‑Fi Hotspot</string>
+    <string name="tether_usb">USB Tether</string>
+    <string name="tether_bt">Bluetooth</string>
+    <string name="tether_other">Tether Interface</string>
+
+    <string name="mode_title">Routing Mode</string>
+    <string name="mode_global">Global</string>
+    <string name="mode_allow">Whitelist</string>
+    <string name="mode_block">Blacklist</string>
+    <string name="mode_global_hint">All private subnet hotspot traffic routes through VPN. No interface selection needed.</string>
+    <string name="mode_allow_hint">Select managed interfaces first. Only listed devices use VPN; others route directly. If empty, all route directly.</string>
+    <string name="mode_block_hint">Select managed interfaces first. Listed devices route directly; others use VPN. If empty, all use VPN.</string>
+    <string name="mode_switched_allow">Switched to Whitelist mode</string>
+    <string name="mode_switched_block">Switched to Blacklist mode</string>
+    <string name="mode_switched_global">Switched to Global mode</string>
+
+    <string name="devices_title">Connected Devices</string>
+    <string name="empty_devices">No hotspot clients connected\nClients will appear here after connecting</string>
+    <string name="empty_managed_hint">Please select managed interfaces first to view and configure devices.</string>
+    <string name="action_vpn">Via VPN</string>
+    <string name="action_direct">Direct</string>
+    <string name="reconcile">Reconcile</string>
+    <string name="rule_reconciled">Rules reconciled</string>
+    <string name="daemon_unresponsive">Daemon unresponsive</string>
+    <string name="switch_failed">Switch failed</string>
+    <string name="iface_set_failed">Failed to set interfaces</string>
+    <string name="device_set_failed">Failed to update device</string>
+
+    <string name="stack_title">Protocol Stack</string>
+    <string name="stack_ipv4">IPv4</string>
+    <string name="stack_ipv6">IPv6</string>
+    <string name="stack_hint">Disabling a protocol stops routing rules for that family</string>
+
+    <string name="dns_title">DNS Redirection</string>
+    <string name="dns_off">Off</string>
+    <string name="dns_auto">Auto</string>
+    <string name="dns_custom">Custom</string>
+    <string name="dns_off_hint">Do not hijack client DNS; use hotspot/system resolution.</string>
+    <string name="dns_auto_hint">Redirect client DNS queries to common public resolvers.</string>
+    <string name="dns_custom_v4_hint">IPv4 DNS (Default 8.8.8.8)</string>
+    <string name="dns_custom_v6_hint">IPv6 DNS (Default 2001:4860:4860::8888)</string>
+    <string name="dns_custom_mode_hint">Custom: defaults to Google DNS; change and tap Apply.</string>
+    <string name="dns_invalid_v4">Invalid IPv4 DNS format</string>
+    <string name="dns_invalid_v6">Invalid IPv6 DNS format</string>
+    <string name="dns_apply">Apply DNS</string>
+    <string name="dns_apply_failed">Failed to apply DNS (daemon rejected configuration)</string>
+
+    <string name="ifaces_title">Managed Interfaces</string>
+    <string name="ifaces_hint">Select interfaces to manage. \"Recommended\" is a hint. Whitelist/blacklist only applies to these interfaces.</string>
+    <string name="iface_recommended">Rec</string>
+    <string name="iface_managed_format">Managed %s</string>
+    <string name="iface_unmanaged_format">Unmanaged %s</string>
+
+    <!-- Theme & Language Switcher -->
+    <string name="theme_title">App Theme</string>
+    <string name="theme_system">System Default</string>
+    <string name="theme_light">Light Mode</string>
+    <string name="theme_dark">Dark Mode</string>
+    <string name="lang_title">App Language</string>
+    <string name="lang_system">System Default</string>
+    <string name="lang_zh">简体中文 (Chinese)</string>
+    <string name="lang_en">English</string>
+
+    <string name="help">Help</string>
+    <string name="help_title">Help &amp; FAQ</string>
+    <string name="help_back">Back</string>
+    <string name="help_intro">When using this module for Hotspot → VPN, check the items below. Tap an item to expand.</string>
+
+    <string name="help_q_vpn_tun">Before use: Which extra TUN features in the VPN App should be disabled?</string>
+    <string name="help_a_vpn_tun">Please disable any TUN features in your VPN app that conflict with routing or network interfaces (e.g., Exclusive TUN, Block LAN, Force Global Takeover, depending on client).\n\nThis module relies on the system tun interface and routing tables. Stacking proprietary LAN blocks prevents tethering traffic from entering the Linux forwarding path.</string>
+
+    <string name="help_q_ipv4_only">Can I enable IPv4 only?</string>
+    <string name="help_a_ipv4_only">Yes, and it is the easiest setup.\n\nMost hotspot clients receive a private 192.168.x address by default, and return routes are managed by Android. Enabling IPv4 and disabling IPv6 works reliably.\n\nSimply select IPv4 in the Protocol Stack.</string>
+
+    <string name="help_q_ipv6">What should I watch out for when using IPv6?</string>
+    <string name="help_a_ipv6">All three conditions must be met:\n\n1. The VPN client itself must support IPv6 (with assigned IPv6 address and routes in the tunnel).\n2. IPv6 must be checked in this module\'s Protocol Stack.\n3. Tethering hardware acceleration must be turned off (see next item); otherwise chipsets may bypass Linux routing.\n\nIf using IPv6 without IPv4, ensure all 3 points are confirmed.</string>
+
+    <string name="help_q_offload">Why turn off Tethering Hardware Acceleration?</string>
+    <string name="help_a_offload">When hardware offload is enabled, traffic from tethering interfaces (e.g. wlan1) may be directly offloaded to cellular hardware, bypassing the Linux network stack.\n\nEffects:\n• ip rules and module routes will not see packets\n• iptables FORWARD and TCPMSS rules will not take effect\n• IPv6 will frequently fail or bypass VPN\n\nHow to disable (MIUI / Xiaomi):\nSettings → Additional settings → Developer options → in the Networking section, turn off \"Tethering hardware acceleration\" (Chinese UI label: 网络共享硬件加速).\n\nOr via adb:\nsettings put global tether_offload_disabled 1</string>
+
+    <string name="help_q_modes">How to choose between Global, Whitelist, and Blacklist?</string>
+    <string name="help_a_modes">• Global: Routes all private subnet traffic without selecting interfaces or per-device setup.\n• Whitelist: Select managed interfaces; only listed clients route through VPN.\n• Blacklist: Select managed interfaces; listed clients route directly, others through VPN.\n\nWhitelist/Blacklist require selecting managed interfaces to install iif rules.</string>
+
+    <string name="help_q_why_v6_fail">IPv6 failed previously but now works?</string>
+    <string name="help_a_why_v6_fail">Common factors:\n\n1. Return routing: Android system must have the hotspot prefix route in local_network (table 97).\n2. Hardware acceleration bypassed Linux.\n3. TCPMSS clamping must precede ACCEPT to prevent PMTU black holes.\n4. VPN client lacked proper IPv6 upstream routing.</string>
+
+    <string name="theme_sheet_title">Appearance Theme</string>
+    <string name="theme_sheet_subtitle">Choose color theme and day/night mode</string>
+    <string name="theme_system_desc">Follow device light/dark appearance</string>
+    <string name="theme_light_desc">Clean high-contrast bright ceramic mode</string>
+    <string name="theme_dark_desc">Deep obsidian black low-light mode</string>
+
+    <string name="lang_sheet_title">Display Language</string>
+    <string name="lang_sheet_subtitle">Choose your preferred application language</string>
+    <string name="lang_system_desc">Match device system language</string>
+    <string name="lang_zh_desc">Simplified Chinese (简体中文)</string>
+    <string name="lang_en_desc">English (International)</string>
+
+    <string name="dns_preset_choose">⚡ Public DNS Presets (Tap to choose or enter below) ▼</string>
+    <string name="dns_preset_title">Public DNS Presets</string>
+    <string name="dns_preset_subtitle">Tap to auto-fill addresses, or freely edit below</string>
+    <string name="dns_preset_ali">Alibaba Cloud DNS (AliDNS)</string>
+    <string name="dns_preset_ali_desc">Fast in China · Ali Anycast Nationwide</string>
+    <string name="dns_preset_tencent">Tencent DNSPod</string>
+    <string name="dns_preset_tencent_desc">China multi-carrier optimized resolution</string>
+    <string name="dns_preset_cf">Cloudflare (1.1.1.1)</string>
+    <string name="dns_preset_cf_desc">Fastest global · Privacy &amp; security encryption</string>
+    <string name="dns_preset_google">Google Public DNS (8.8.8.8)</string>
+    <string name="dns_preset_google_desc">Global classic · Ultra-high reliability</string>
+    <string name="dns_preset_114">114 DNS (114.114.114.114)</string>
+    <string name="dns_preset_114_desc">Classic domestic pure China DNS</string>
+    <string name="dns_preset_quad9">Quad9 DNS (9.9.9.9)</string>
+    <string name="dns_preset_quad9_desc">Malware blocking &amp; Swiss privacy protection</string>
+    <string name="dns_preset_manual">Clear &amp; Manual Input</string>
+    <string name="dns_preset_manual_desc">Clear fields to type custom/self-hosted DNS</string>
+
+    <string name="selected_tag">Active</string>
+    <string name="btn_cancel">Cancel</string>
+</resources>

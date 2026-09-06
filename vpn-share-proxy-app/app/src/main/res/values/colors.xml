@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Background & Surfaces (Light Mode) -->
+    <color name="bg">#F4F6FA</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#EAEFF5</color>
+    <color name="card_stroke">#DCE3EC</color>
+    <color name="line">#E2E8F0</color>
+
+    <!-- Typography -->
+    <color name="ink">#0F172A</color>
+    <color name="ink_muted">#64748B</color>
+
+    <!-- Accents & Semantics -->
+    <color name="accent">#059669</color>
+    <color name="accent_soft">#D1FAE5</color>
+    <color name="accent_cyan">#0284C7</color>
+    <color name="accent_cyan_soft">#E0F2FE</color>
+
+    <color name="warn">#D97706</color>
+    <color name="warn_soft">#FEF3C7</color>
+
+    <color name="danger">#DC2626</color>
+    <color name="danger_soft">#FEE2E2</color>
+
+    <!-- Segmented Button & Interaction -->
+    <color name="mode_selected_bg">#059669</color>
+    <color name="mode_selected_fg">#FFFFFF</color>
+    <color name="mode_selected_blue_bg">#0284C7</color>
+    <color name="mode_selected_blue_fg">#FFFFFF</color>
+    <color name="mode_idle_bg">#EAEFF5</color>
+    <color name="mode_idle_fg">#64748B</color>
+    <color name="mode_idle_stroke">#DCE3EC</color>
+</resources>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VPN Share Proxy</string>
+    <string name="brand">VPN Share Proxy</string>
+    <string name="brand_subtitle">随行流桥 · VPN Share Proxy 控制台</string>
+    <string name="status_tun_label">VPN 网卡 (tun)</string>
+    <string name="status_table_label">路由表 (Table)</string>
+    <string name="status_devices_label">热点在线设备</string>
+    <string name="status_stack_label">当前协议栈</string>
+    <string name="status_checking">● 检测中</string>
+    <string name="status_active">● 转发中</string>
+    <string name="status_waiting">● 等待 VPN</string>
+    <string name="status_standby">● 待机</string>
+    <string name="status_offline">● 离线</string>
+    <string name="status_daemon_ready">守护进程状态</string>
+    <string name="device_count_format">%d 台设备</string>
+    <string name="table_format">表 %s</string>
+    <string name="state_via_vpn">当前：走 VPN</string>
+    <string name="state_direct">当前：直连</string>
+    <string name="iface_selected">已选</string>
+    <string name="iface_unselected">未选</string>
+    <string name="tether_wifi">Wi‑Fi 热点</string>
+    <string name="tether_usb">USB 共享</string>
+    <string name="tether_bt">蓝牙共享</string>
+    <string name="tether_other">共享口</string>
+
+    <string name="mode_title">分流模式</string>
+    <string name="mode_global">全局</string>
+    <string name="mode_allow">白名单</string>
+    <string name="mode_block">黑名单</string>
+    <string name="mode_global_hint">私网段热点流量统一走 VPN，无需勾选网口或逐台设置。</string>
+    <string name="mode_allow_hint">先勾选管理网口；仅名单内设备走 VPN，其余直连。名单为空则全部直连。</string>
+    <string name="mode_block_hint">先勾选管理网口；名单内直连，其余走 VPN。名单为空则全部走 VPN。</string>
+    <string name="mode_switched_allow">已切到白名单</string>
+    <string name="mode_switched_block">已切到黑名单</string>
+    <string name="mode_switched_global">已切到全局</string>
+
+    <string name="devices_title">已连接设备</string>
+    <string name="empty_devices">暂无热点客户端\n打开热点后会出现在这里</string>
+    <string name="empty_managed_hint">请先勾选要管理的网口，才会列出设备并可设置走 VPN / 直连。</string>
+    <string name="action_vpn">走 VPN</string>
+    <string name="action_direct">直连</string>
+    <string name="reconcile">重写规则</string>
+    <string name="rule_reconciled">规则已重写</string>
+    <string name="daemon_unresponsive">守护进程无响应</string>
+    <string name="switch_failed">切换失败</string>
+    <string name="iface_set_failed">设置网口失败</string>
+    <string name="device_set_failed">设置失败</string>
+
+    <string name="stack_title">代理栈</string>
+    <string name="stack_ipv4">IPv4</string>
+    <string name="stack_ipv6">IPv6</string>
+    <string name="stack_hint">关闭对应协议后不再下发该族的转发规则</string>
+
+    <string name="dns_title">DNS 重定向</string>
+    <string name="dns_off">关闭</string>
+    <string name="dns_auto">自动</string>
+    <string name="dns_custom">自定义</string>
+    <string name="dns_off_hint">不劫持客户端 DNS，沿用热点/系统解析。</string>
+    <string name="dns_auto_hint">把客户端 DNS 重定向到常用公共解析。</string>
+    <string name="dns_custom_v4_hint">IPv4 DNS（默认 8.8.8.8）</string>
+    <string name="dns_custom_v6_hint">IPv6 DNS（默认 2001:4860:4860::8888）</string>
+    <string name="dns_custom_mode_hint">自定义：默认谷歌 DNS；可改后点应用。</string>
+    <string name="dns_invalid_v4">IPv4 DNS 格式不正确</string>
+    <string name="dns_invalid_v6">IPv6 DNS 格式不正确</string>
+    <string name="dns_apply">应用 DNS</string>
+    <string name="dns_apply_failed">应用失败（守护进程拒绝配置）</string>
+
+    <string name="ifaces_title">管理网口</string>
+    <string name="ifaces_hint">点选纳入管理的网口；「推荐」仅为提示，可能不准。白/黑名单只作用于这些口上的设备。</string>
+    <string name="iface_recommended">推荐</string>
+    <string name="iface_managed_format">已管理 %s</string>
+    <string name="iface_unmanaged_format">已取消 %s</string>
+
+    <!-- Theme & Language Switcher -->
+    <string name="theme_title">界面主题</string>
+    <string name="theme_system">跟随系统</string>
+    <string name="theme_light">浅色模式</string>
+    <string name="theme_dark">暗黑模式</string>
+    <string name="lang_title">应用语言</string>
+    <string name="lang_system">跟随系统 (System)</string>
+    <string name="lang_zh">简体中文</string>
+    <string name="lang_en">English</string>
+
+    <string name="help">帮助</string>
+    <string name="help_title">帮助</string>
+    <string name="help_back">返回</string>
+    <string name="help_intro">使用本模块做「热点 → VPN」时，请按下面检查。点条目可展开。</string>
+
+    <string name="help_q_vpn_tun">使用前：VPN 客户端要关哪些 TUN 附加功能？</string>
+    <string name="help_a_vpn_tun">请关闭 VPN App 里会与本模块抢路由/抢网卡的 TUN 附加功能（例如：Hex Tun / 独占 TUN、禁止局域网、强制全局接管等，名称因客户端而异）。\n\n本模块依赖系统已建立的 tun 接口和路由表；VPN 侧再叠一层「独占/改写局域网」容易导致热点流量进不了 Linux 转发路径。</string>
+
+    <string name="help_q_ipv4_only">只开 IPv4 可以吗？</string>
+    <string name="help_a_ipv4_only">可以，而且最省事。\n\n多数热点客户端默认有 192.168.x 私网地址，回程路由系统会写好；只开 IPv4、关掉 IPv6，一般即可正常走 VPN。\n\n本模块代理栈里只勾选 IPv4 即可。</string>
+
+    <string name="help_q_ipv6">只开 / 要开 IPv6 时要注意什么？</string>
+    <string name="help_a_ipv6">需要同时满足：\n\n1. VPN 客户端本身打开 IPv6（隧道里要有 IPv6 地址与路由，例如 fc00:: / 2000::/3）。\n2. 本模块代理栈勾选 IPv6。\n3. 关闭「网络共享硬件加速」（见下一条），否则包可能被硬件直接转到蜂窝，不走 Linux 路由，本模块规则无效。\n\n只开 IPv6、关 IPv4 时，务必确认以上三点，否则客户端 V6 会「像通又不通」。</string>
+
+    <string name="help_q_offload">为什么要关「网络共享硬件加速」？</string>
+    <string name="help_a_offload">开启后，热点口（如 wlan1）到数据网络的流量可能被芯片/卸载模块直转，绕过 Linux 协议栈。\n\n后果：\n• ip rule / 本模块装的路由看不到这些包\n• iptables 的 FORWARD、TCPMSS 也不生效\n• 热点 IPv6 尤其容易表现为默认不通，或根本不进 VPN\n\n怎么关（MIUI / 小米）：\n设置 → 更多设置 → 开发者选项 → 网络相关列表里找到「网络共享硬件加速」→ 关掉。\n\n也可用 adb（需 root / 调试）：\nsettings put global tether_offload_disabled 1\n\n值为 1 = 关闭加速（推荐配合本模块）；删除该设置或设为 0 = 允许加速。</string>
+
+    <string name="help_q_modes">全局 / 白名单 / 黑名单怎么选？</string>
+    <string name="help_a_modes">• 全局：按私网段（IPv4）或约定前缀策略转发，无需逐台设置；IPv6 公网前缀场景更建议白名单并勾选热点网口。\n• 白名单：先勾选管理网口，仅名单内设备走 VPN。\n• 黑名单：先勾选管理网口，名单内直连，其余走 VPN。\n\n白/黑名单下若不勾选管理网口，不会给客户端下发 iif 规则。</string>
+
+    <string name="help_q_why_v6_fail">IPv6 曾经不通，后来又通了？</string>
+    <string name="help_a_why_v6_fail">常见组合原因：\n\n1. 回程：系统要在 local_network（表 97）里有「热点前缀 → wlan1」；只有 fe80 时，进了 VPN 也回不来。\n2. 「网络共享硬件加速」开着时，包被直送蜂窝，不走 Linux。\n3. TCPMSS 必须在 ACCEPT 之前（本模块已修复），否则隧道易出现 PMTU 黑洞。\n4. VPN 未开 IPv6，或客户端拿到运营商 GUA 但回程/MSS 条件不齐。\n\n条件齐了（VPN 开 V6 + 关掉开发者选项里的「网络共享硬件加速」+ 回程前缀存在）后，ipv6.google.com 可以通，并不矛盾。</string>
+
+    <string name="theme_sheet_title">外观主题</string>
+    <string name="theme_sheet_subtitle">选择界面色彩风格与日夜模式</string>
+    <string name="theme_system_desc">根据系统深浅色设置自动切换</string>
+    <string name="theme_light_desc">高对比度清爽纯白陶瓷风格</string>
+    <string name="theme_dark_desc">低光深邃护眼曜石黑风格</string>
+
+    <string name="lang_sheet_title">界面语言</string>
+    <string name="lang_sheet_subtitle">选择适合您的界面显示语言</string>
+    <string name="lang_system_desc">自动匹配系统语言设置</string>
+    <string name="lang_zh_desc">简体中文界面及专业术语</string>
+    <string name="lang_en_desc">English International Interface</string>
+
+    <string name="dns_preset_choose">⚡ 常用公共 DNS 预设 (点击选择或下方手填) ▼</string>
+    <string name="dns_preset_title">常用公共 DNS 预设</string>
+    <string name="dns_preset_subtitle">点击快速填入预设地址，也可在下方输入框自由修改</string>
+    <string name="dns_preset_ali">阿里公共 DNS (AliDNS)</string>
+    <string name="dns_preset_ali_desc">国内极速推荐 · 阿里全国 Anycast 加速</string>
+    <string name="dns_preset_tencent">腾讯公共 DNS (DNSPod)</string>
+    <string name="dns_preset_tencent_desc">国内推荐 · 移动电信联通多线智能优化</string>
+    <string name="dns_preset_cf">Cloudflare (1.1.1.1)</string>
+    <string name="dns_preset_cf_desc">全球极速 · 强加密隐私保护与稳定性</string>
+    <string name="dns_preset_google">Google Public DNS (8.8.8.8)</string>
+    <string name="dns_preset_google_desc">全球经典通用 · 解析覆盖率极高</string>
+    <string name="dns_preset_114">114 DNS (114.114.114.114)</string>
+    <string name="dns_preset_114_desc">国内纯净老牌公共 DNS</string>
+    <string name="dns_preset_quad9">Quad9 DNS (9.9.9.9)</string>
+    <string name="dns_preset_quad9_desc">全球恶意网址拦截 · 瑞士非盈利隐私保护</string>
+    <string name="dns_preset_manual">清空并手动输入</string>
+    <string name="dns_preset_manual_desc">清空输入框，手动输入自建或专属 DNS</string>
+
+    <string name="selected_tag">已选择</string>
+    <string name="btn_cancel">取消</string>
+</resources>
